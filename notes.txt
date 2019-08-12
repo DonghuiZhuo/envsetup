@@ -1,0 +1,9 @@
+https://opensource.apple.com/source/lldb/lldb-69/docs/code-signing.txt
+curl --user zheng.lu@salesforce.com:327d27ee-6c4c-4c85-9277-6a80d8236e01 -n https://api.heroku.com/apps/agent-test-1/releases -H "Accept: application/vnd.heroku+json; version=3"
+curl -n https://api.heroku.com/apps/agent-test-1/slugs/1ff8e87c-b1d9-4625-80e6-82b091e41bd6 -H "Accept: application/vnd.heroku+json; version=3" --user zheng.lu@salesforce.com:327d27ee-6c4c-4c85-9277-6a80d8236e01
+docker build --tag test-container-1 .
+heroku container:push test-container-1 -a test-container-1
+heroku container:release test-container-1 -a test-container-1
+heroku local:run ./bin/console
+pg_ctl -D /usr/local/var/postgres stop
+redis-server /usr/local/etc/redis.conf
